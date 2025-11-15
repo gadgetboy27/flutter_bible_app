@@ -107,6 +107,13 @@
   margin-bottom: var(--spacing-md);
 }
 
+.message-scriptures .scripture-wrapper {
+  margin-bottom: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.5);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+}
+
 .message-scriptures blockquote {
   font-size: 0.95rem;
   line-height: 1.6;

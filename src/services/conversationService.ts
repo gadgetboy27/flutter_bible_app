@@ -65,39 +65,39 @@ export class ConversationService {
   private static generatePersonalizedResponse(message: string, keywords: string[]): string {
     const responses: { [key: string]: string[] } = {
       work: [
-        "Work challenges can be incredibly stressful. Remember that God is with you in your workplace, and He cares about every aspect of your life, including your career.",
-        "I hear you're struggling at work. Jehovah sees your efforts and your struggles. He promises to give you wisdom and strength for each day.",
-        "Work stress is a common burden. God wants you to find balance and peace, even in difficult professional situations."
+        "The Scriptures remind us in Colossians 3:23: 'Whatever you do, work at it with all your heart, as working for the Lord.' Jehovah sees your labor and honors your faithfulness, even when others don't recognize it.",
+        "Proverbs 16:3 tells us to 'Commit to the Lord whatever you do, and he will establish your plans.' God is with you in your workplace. Let's ground your next steps in His wisdom.",
+        "Remember Philippians 4:13: 'I can do all this through him who gives me strength.' Your work challenges are not beyond God's ability to sustain and guide you through."
       ],
       anxiety: [
-        "Anxiety can feel overwhelming, but you're not alone in this. God invites you to cast all your anxieties on Him because He cares for you deeply.",
-        "I understand how anxiety can consume your thoughts. Jehovah offers His perfect peace that surpasses all understanding.",
-        "Your worries are valid, and God sees them. He promises to be your refuge and strength, especially in times of trouble."
+        "Scripture speaks directly to anxiety in Philippians 4:6-7: 'Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.' This isn't just advice—it's God's invitation to release your burdens to Him.",
+        "Jesus himself said in Matthew 11:28: 'Come to me, all you who are weary and burdened, and I will give you rest.' This is His promise to you right now—rest for your anxious soul.",
+        "God knows your worries. Psalm 46:1 declares: 'God is our refuge and strength, a very present help in trouble.' He is present with you in this moment of anxiety."
       ],
       lonely: [
-        "Loneliness is painful, but please know that Jehovah never leaves you. His presence is constant, even when you feel most alone.",
-        "I'm sorry you're feeling isolated. God understands loneliness - remember that He is always near to the brokenhearted.",
-        "Feeling alone can be one of the hardest struggles. But God promises He will never leave you nor forsake you."
+        "Scripture promises in Deuteronomy 31:6: 'The Lord your God goes with you; he will never leave you nor forsake you.' Even in your loneliness, Jehovah's presence is constant.",
+        "Psalm 68:6 tells us 'God sets the lonely in families.' He sees your isolation and wants to surround you with community and connection.",
+        "Jesus experienced loneliness too. He understands. Hebrews 13:5 reminds us: 'Never will I leave you; never will I forsake you.' This is God's unchanging promise to you."
       ],
       sad: [
-        "I'm truly sorry you're going through this sadness. Jehovah is close to the brokenhearted and saves those who are crushed in spirit.",
-        "Your pain matters to God. He collects your tears and promises that joy will come again.",
-        "Sadness is part of the human experience, but it doesn't have to be permanent. God offers comfort and healing for your heart."
+        "Psalm 34:18 speaks directly to your heart: 'The Lord is close to the brokenhearted and saves those who are crushed in spirit.' Your sadness matters to God—He is near to you now.",
+        "Jesus wept (John 11:35), showing us that sadness is part of being human. God doesn't condemn your tears; He collects them (Psalm 56:8) and promises that 'weeping may stay for the night, but rejoicing comes in the morning' (Psalm 30:5).",
+        "Isaiah 61:3 promises that God will 'bestow on them a crown of beauty instead of ashes, the oil of joy instead of mourning.' Hold onto this hope—your sadness will not last forever."
       ],
       family: [
-        "Family issues can be deeply painful. God understands the complexity of family relationships and offers wisdom for navigating them.",
-        "I hear you about your family struggles. Jehovah can bring healing and reconciliation, even in the most difficult family situations.",
-        "Family challenges are some of the hardest to face. Remember that God is the ultimate Father who loves you perfectly."
+        "Ephesians 4:32 guides family relationships: 'Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you.' Let God's forgiveness be your model.",
+        "Proverbs 15:1 teaches: 'A gentle answer turns away wrath, but a harsh word stirs up anger.' God's wisdom can transform your family dynamics.",
+        "Remember that even biblical families struggled—yet God worked through their imperfections. He can work through yours too. Seek His wisdom as you navigate these relationships."
       ],
       relationship: [
-        "Relationship struggles can be heartbreaking. God cares about your relationships and wants to bring healing and wisdom to your situation.",
-        "I understand relationship pain cuts deep. Jehovah can provide guidance, whether that means healing, reconciliation, or the strength to move forward.",
-        "Relationships are complex, and God sees every hurt you're experiencing. He offers both practical wisdom and emotional healing."
+        "1 Corinthians 13:4-7 defines love: 'Love is patient, love is kind...' These aren't just words—they're God's design for relationships. Let Scripture guide your interactions.",
+        "Colossians 3:13 instructs: 'Bear with each other and forgive one another.' Relationships require grace—the same grace God extends to us daily.",
+        "Whether reconciliation or healing is needed, God sees your situation. James 1:5 promises: 'If any of you lacks wisdom, you should ask God, who gives generously.'"
       ],
       financial: [
-        "Financial stress can be consuming. Remember that God is your provider, and He promises to meet your needs as you trust in Him.",
-        "Money worries are real and pressing. Jehovah sees your needs and invites you to seek His kingdom first, trusting Him with provision.",
-        "Financial challenges are difficult, but God has promised to supply all your needs according to His riches."
+        "Matthew 6:33 redirects our focus: 'Seek first his kingdom and his righteousness, and all these things will be given to you as well.' Jehovah promises provision when we prioritize Him.",
+        "Philippians 4:19 is God's direct promise: 'My God will meet all your needs according to the riches of his glory in Christ Jesus.' Trust this truth.",
+        "Hebrews 13:5 reminds us: 'Keep your lives free from the love of money and be content with what you have, because God has said, \"Never will I leave you; never will I forsake you.\"' Your worth isn't in your bank account—it's in being God's beloved child."
       ]
     };
 

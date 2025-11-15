@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ChatMessage } from '../types';
 import { ConversationService } from '../services/conversationService';
+import { ScriptureWithTranslations } from './ScriptureWithTranslations';
 import './ChatScreen.css';
 
 export const ChatScreen: React.FC = () => {
@@ -101,11 +102,15 @@ export const ChatScreen: React.FC = () => {
 
                 {message.scriptures && message.scriptures.length > 0 && (
                   <div className="message-scriptures">
-                    <h4>📖 Scriptures for You:</h4>
+                    <h4>📖 Scriptures for You (Multiple Translations):</h4>
                     {message.scriptures.map((scripture, idx) => (
-                      <div key={idx} className="scripture-item">
-                        <blockquote>"{scripture.text}"</blockquote>
-                        <p className="reference">— {scripture.reference}</p>
+                      <div key={idx} className="scripture-wrapper">
+                        <ScriptureWithTranslations
+                          scripture={scripture}
+                          defaultTranslation="NIV"
+                          showAllTranslations={false}
+                          compact={false}
+                        />
                       </div>
                     ))}
                   </div>

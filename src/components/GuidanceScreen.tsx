@@ -1,5 +1,6 @@
 import React from 'react';
 import { AIResponse, PromptCategory } from '../types';
+import { ScriptureWithTranslations } from './ScriptureWithTranslations';
 import './GuidanceScreen.css';
 
 interface GuidanceScreenProps {
@@ -33,14 +34,18 @@ export const GuidanceScreen: React.FC<GuidanceScreenProps> = ({
 
         <section className="scriptures-section">
           <h2>Scriptures for Your Journey</h2>
+          <p className="scriptures-intro">
+            Read these verses in multiple translations to deepen your understanding of God's message for you.
+          </p>
           <div className="scriptures-list">
             {guidance.scriptures.map((scripture, index) => (
-              <div key={index} className="scripture-item slide-in">
+              <div key={index} className="scripture-item-wrapper slide-in">
                 <div className="verse-marker">{index + 1}</div>
-                <div className="scripture-content">
-                  <blockquote>"{scripture.text}"</blockquote>
-                  <p className="reference">— {scripture.reference}</p>
-                </div>
+                <ScriptureWithTranslations
+                  scripture={scripture}
+                  defaultTranslation="NIV"
+                  showAllTranslations={false}
+                />
               </div>
             ))}
           </div>

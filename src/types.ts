@@ -4,6 +4,18 @@ export interface Scripture {
   verse: string;
   text: string;
   reference: string;
+  translations?: {
+    [key: string]: string; // e.g., { 'NWT': '...', 'KJV': '...', 'Greek': '...' }
+  };
+}
+
+export type BibleTranslation = 'NIV' | 'NWT' | 'KJV' | 'Greek';
+
+export interface TranslationInfo {
+  id: BibleTranslation;
+  name: string;
+  description: string;
+  language: string;
 }
 
 export interface PromptCategory {

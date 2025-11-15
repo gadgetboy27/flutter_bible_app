@@ -70,10 +70,27 @@
   margin: 0;
 }
 
+.scriptures-intro {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+  font-style: italic;
+}
+
 .scriptures-list {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
+}
+
+.scripture-item-wrapper {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 10px var(--color-shadow);
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
 }
 
 .scripture-item {
@@ -98,6 +115,11 @@
   font-weight: 600;
   flex-shrink: 0;
   font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.scripture-item-wrapper .scripture-with-translations {
+  flex: 1;
 }
 
 .scripture-content {
