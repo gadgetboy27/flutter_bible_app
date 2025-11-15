@@ -20,4 +20,20 @@ export interface AIResponse {
   practicalAdvice: string[];
 }
 
-export type ViewType = 'home' | 'daily' | 'help' | 'guidance';
+export interface ChatMessage {
+  id: string;
+  role: 'user' | 'assistant';
+  content: string;
+  timestamp: Date;
+  scriptures?: Scripture[];
+  practicalSteps?: string[];
+}
+
+export interface ConversationResponse {
+  message: string;
+  scriptures?: Scripture[];
+  practicalSteps?: string[];
+  suggestions?: string[];
+}
+
+export type ViewType = 'home' | 'daily' | 'help' | 'guidance' | 'chat';

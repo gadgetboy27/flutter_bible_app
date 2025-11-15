@@ -3,6 +3,7 @@ import { ViewType, PromptCategory, AIResponse } from './types';
 import { DailyScripture } from './components/DailyScripture';
 import { HelpScreen } from './components/HelpScreen';
 import { GuidanceScreen } from './components/GuidanceScreen';
+import { ChatScreen } from './components/ChatScreen';
 import { AIService } from './services/aiService';
 import './App.css';
 
@@ -39,6 +40,8 @@ function App() {
             onBack={handleBackToHelp}
           />
         ) : null;
+      case 'chat':
+        return <ChatScreen />;
       default:
         return <DailyScripture />;
     }
@@ -68,6 +71,14 @@ function App() {
             >
               <span className="nav-icon">💙</span>
               <span>Find Help</span>
+            </button>
+
+            <button
+              className={`nav-link ${currentView === 'chat' ? 'active' : ''}`}
+              onClick={() => setCurrentView('chat')}
+            >
+              <span className="nav-icon">💬</span>
+              <span>Talk With Me</span>
             </button>
           </div>
         </div>
