@@ -1,0 +1,187 @@
+.scripture-with-translations {
+  margin-bottom: var(--spacing-md);
+}
+
+.translation-controls {
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+.translation-picker-button {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.translation-picker-button:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.translation-picker {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: var(--spacing-xs);
+  background: var(--color-surface);
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px var(--color-shadow);
+  padding: var(--spacing-sm);
+  z-index: 10;
+  min-width: 300px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.translation-option {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+  align-items: flex-start;
+}
+
+.translation-option:hover {
+  background: var(--color-background);
+}
+
+.translation-option input[type="checkbox"] {
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.translation-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.translation-name {
+  font-weight: 500;
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+}
+
+.translation-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  line-height: 1.3;
+}
+
+.translations-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.translation-block {
+  position: relative;
+}
+
+.translation-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
+.translation-badge {
+  background: var(--color-accent);
+  color: white;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.translation-name-small {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.scripture-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  font-style: italic;
+  margin: var(--spacing-xs) 0;
+  padding-left: var(--spacing-md);
+  border-left: 3px solid var(--color-primary-light);
+}
+
+.scripture-text.kjv {
+  font-family: Georgia, 'Times New Roman', serif;
+  border-left-color: var(--color-accent);
+}
+
+.scripture-text.greek {
+  font-family: 'Times New Roman', serif;
+  border-left-color: #8B7355;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.scripture-text.nwt {
+  border-left-color: var(--color-primary);
+}
+
+.scripture-reference {
+  text-align: right;
+  color: var(--color-primary-dark);
+  font-weight: 500;
+  margin: var(--spacing-xs) 0 0 0;
+  font-size: 0.95rem;
+}
+
+.scripture-reference.multi {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-primary-light);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.translations-hint {
+  margin-top: var(--spacing-xs);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* Compact mode */
+.scripture-with-translations.compact .scripture-text {
+  font-size: 1rem;
+}
+
+.scripture-with-translations.compact .translation-badge {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 600px) {
+  .translation-picker {
+    min-width: 280px;
+    right: 0;
+    left: auto;
+  }
+
+  .scripture-text {
+    font-size: 1rem;
+    padding-left: var(--spacing-sm);
+  }
+
+  .scripture-text.greek {
+    font-size: 0.9rem;
+  }
+}
